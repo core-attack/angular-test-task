@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\conf",
+    "\\gulp_tasks",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\services"
+  ],
+  "SelectedNode": "\\src\\index.js",
+  "PreviewInSolutionExplorer": false
+}

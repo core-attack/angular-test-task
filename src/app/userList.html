@@ -1,0 +1,9 @@
+﻿<table class="user-list" ng-repeat="user in $ctrl.users">
+    <tr class="user-info">
+        <td class="picture">{{user.picture.medium}}</td>
+        <td class="name"><a href="/user-view/:{{user.seed}}">{{user.name}}</td>
+        <td class="email">{{user.email}}</td>
+        <td class="phone">{{user.phone}}</td>
+        <td class="dob">{{user.dob}}</td>
+    </tr>
+</table>
