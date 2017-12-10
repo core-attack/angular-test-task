@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        /* вариант 1 (не совсем по заданию)*/
+        UserObj = function (value) {
+            return {
+                value: value,
+                show: function () {
+                    console.log(value);
+                }
+            }
+        }
+
+        function createUsers() {
+            var users = [];
+
+            for (var i = 0; i < 10; i++) {
+                var user = new UserObj(i);
+                users.push(user);
+            }
+
+            return users;
+        }
+
+        var users = createUsers();
+
+        users[0].show(); // выводит 10, а нужно 0 
+        users[5].show(); // выводит 10, а нужно 5
+
+        
+        //почему не работает и как исправить? 
+        //потому что переменная i создается до выполнения цикла, на стадии инициализации, а её значение сохраняется после окончания цикла.
+
+        /*вариант 2 (тут обращение к массиву не меняется)*/
+        /*
+        UserObj = function (value) {
+            return function () { console.log(value); }
+        }
+
+        function createUsers() {
+            var users = [];
+
+            for (var i = 0; i < 10; i++) {
+                var user = new UserObj(i);
+                users.push(user);
+            }
+
+            return users;
+        }
+
+        var users = createUsers();
+
+        users[0](); 
+        users[5]();
+        */
+    </script>
+</body>
+</html>
